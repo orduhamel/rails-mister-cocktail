@@ -4,6 +4,6 @@ class Dose < ApplicationRecord
 
   # A dose must have a description, a cocktail and an ingredient,
   # and [cocktail, ingredient] pairings should be unique.
-  validates :description, :cocktail, :ingredient, presence: true
+  # validates :description, :cocktail, presence: true
   validates :cocktail, uniqueness: { scope: :ingredient }
 end
