@@ -1,12 +1,12 @@
 <div class="home-banner">
-  <h1>Cocktail list</h1>
+  <h1>Cocktaaail</h1>
   <p>
     <span id="banner-typed-text"></span>
   </p>
 </div>
 
 
-<div class="container my-5">
+<!-- <div class="container my-5">
   <div class="row justify-content-around">
       <% @cocktails.each do |cocktail| %>
       <div class="col-sm-3">
@@ -16,6 +16,14 @@
       </div>
       <% end %>
   </div>
+</div> -->
+
+<div class="cards">
+  <% @cocktails.each do |cocktail| %>
+    <div class="card-category">
+      <%= link_to cocktail.name.upcase, cocktail_path(cocktail) %>
+    </div>
+  <% end %>
 </div>
 
 
